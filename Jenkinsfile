@@ -1,5 +1,10 @@
 pipeline {
     agent any
+    /*
+    environment {
+        x = ${BUILD_NUMBER}
+    }
+    */
 
     stages {
         stage('Build') {
@@ -17,7 +22,7 @@ pipeline {
     }
     post {
         success{
-     build job: 'test', parameters: [string(name: 'VAR', value: sh 'echo $BUILD_NUMBER')]
+     build job: 'test', parameters: [string(name: 'VAR', value: ${BUILD_NUMBER})]
         }
     }
 }
