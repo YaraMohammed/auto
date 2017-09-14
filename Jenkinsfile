@@ -22,7 +22,7 @@ pipeline {
     }
     post {
         success{
-     build job: 'test', parameters: [string(name: 'VAR', value: ${BUILD_NUMBER})]
+     build job: 'test', parameters: [string(name: 'VAR', value: '${BUILD_NUMBER}')]
         }
     }
 }
