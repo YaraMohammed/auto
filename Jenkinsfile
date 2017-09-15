@@ -21,7 +21,7 @@ pipeline {
         success{
         // 'currentBuild' variables in jenkins global variables are accessible through groovy syntax
         // 
-            print currentBuild.result
+            print currentBuild.number
          //   print env.BUILD_NUMBER
         }
         /*
