@@ -12,6 +12,11 @@ pipeline {
                 name: 'Versions',
                 choices:"1.0\n2.0",
                 description: "Build for which version?" )
+            choice(
+                name: 'Invoke_Parameters', 
+                choices:"No\nYes", 
+                description: "Do you whish to do a dry run to grab parameters?" 
+                )
     }
 
     stages {
