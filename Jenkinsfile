@@ -31,7 +31,7 @@ pipeline {
                     build(job: "job1",
                         parameters:
                         [string(name: 'Nodes', value: "${params.Nodes}"),
-                        string(name: 'Versions', value: "${params.Versions}")
+                        string(name: 'Versions', value: "${params.Versions}"),
                         string(name: 'Invoke_Parameters', value: "${params.Invoke_Parameters}")
                         ])
                 }
