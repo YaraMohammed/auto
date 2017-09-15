@@ -3,19 +3,6 @@
 pipeline {
     agent any
     
-        /*
-        parameters {
-            choice(
-                name: 'Nodes',
-                choices:"alphine\nWin",
-                description: "Choose Node!")
-            choice(
-                name: 'Versions',
-                choices:"5.0\n6.0",
-                description: "Build for which version?" )
-        }
-    */
-
             parameters {
                 choice(
                 name: 'Invoke_Parameters', 
