@@ -11,7 +11,7 @@ pipeline {
                 description: "Choose Node!")
             choice(
                 name: 'Versions',
-                choices:"1.0\n2.9",
+                choices:"1.0\n2.0",
                 description: "Build for which version?" )
     }
 
