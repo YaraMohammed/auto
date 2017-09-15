@@ -17,8 +17,13 @@ pipeline {
         
     }
     post {
+        script{
+            echo $currentBuild.number
+        }
+        /*
         success{
             build job: 'test', parameters: [string(name: 'VAR', value: "${BUILD_NUMBER}")]
         }
+        */
     }
 }
