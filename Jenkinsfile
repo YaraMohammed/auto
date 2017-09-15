@@ -14,6 +14,7 @@ pipeline {
                 sh 'javac HelloWorld.java';
                 sh 'jar cf HelloWorld_V."$BUILD_NUMBER".jar HelloWorld.class';
                 sh 'ls'
+                ${BUILD_NUMBER}
                 */
                 sh 'echo $BUILD_NUMBER'
             }
@@ -22,7 +23,7 @@ pipeline {
     }
     post {
         success{
-     build job: 'test', parameters: [string(name: 'VAR', value: '${BUILD_NUMBER}')]
+     build job: 'test', parameters: [string(name: 'VAR', value: 'Hello')]
         }
     }
 }
