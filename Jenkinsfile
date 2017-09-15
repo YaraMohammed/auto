@@ -23,7 +23,7 @@ pipeline {
         // 
             print currentBuild.number
             print currentBuild.currentResult
-            print env.BUILD_NUMBER
+            print "env: "+env.BUILD_NUMBER
         }
         /*
         success{
