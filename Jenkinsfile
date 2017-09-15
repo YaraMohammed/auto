@@ -35,10 +35,18 @@ pipeline {
                 }
             }
         }
+        
         stage("echo")
         {
             steps {
             echo hello
+            }
+        }
+        
+        stage("echo")
+        {
+            steps {
+            echo "${params.Nodes}"
             }
         }
 }
