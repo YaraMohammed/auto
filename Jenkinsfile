@@ -16,7 +16,11 @@ pipeline {
                 
                 
                 //'env' in jenkins global variables are accessible as environment variables in shell
-                sh 'echo $BUILD_NUMBER'
+                sh """
+                echo $BUILD_NUMBER
+                echo $BUILD_NUMBER
+                env
+                """
                 
                 //trying groovy syntax
                 print currentBuild.currentResult
@@ -32,7 +36,7 @@ pipeline {
             print "current build result in post:    "+currentBuild.currentResult
             
         //trying env in groovy
-            print "env: "+env.BUILD_NUMBER
+            print "env:     "+env.BUILD_NUMBER
         }
         /*
         success{
