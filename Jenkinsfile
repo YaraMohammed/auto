@@ -17,8 +17,10 @@ pipeline {
         
     }
     post {
-        script{
-            echo $currentBuild.number
+        success{
+            script{
+                echo $currentBuild.number
+            }
         }
         /*
         success{
