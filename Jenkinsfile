@@ -18,7 +18,7 @@ pipeline {
                 description: "Build for which version?" )
             choice(
                 name: 'Invoke_Parameters', 
-                choices:"Yes\nNo", 
+                choices:"Yes\nNo\nNone", 
                 description: "Do you whish to do a dry run to grab parameters?" 
                 )
     }
