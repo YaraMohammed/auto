@@ -15,6 +15,7 @@ pipeline {
                 description: "Build for which version?" )
         }
     */
+    /*
             parameters {
                 choice(
                 name: 'Invoke_Parameters', 
@@ -22,6 +23,7 @@ pipeline {
                 description: "Do you whish to do a dry run to grab parameters?" 
                 )
             }
+            */
 
     stages {
         stage("parameterizing") {
@@ -32,6 +34,12 @@ pipeline {
                         error('DRY RUN COMPLETED. JOB PARAMETERIZED.')
                     }
                 }
+            }
+        }
+        stage("echo")
+        {
+            steps {
+            echo hello
             }
         }
 }
