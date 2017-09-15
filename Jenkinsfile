@@ -24,6 +24,8 @@ pipeline {
                 
                 //trying groovy syntax
                 print currentBuild.currentResult
+                
+                print "I'm Awesome"
             }
         }
         
