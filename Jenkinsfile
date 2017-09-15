@@ -36,13 +36,7 @@ pipeline {
                 }
             }
         }
-        
-        stage("echo")
-        {
-            steps {
-            echo hello
-            }
-        }
+
         
         stage("params")
         {
