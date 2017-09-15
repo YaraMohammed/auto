@@ -19,7 +19,7 @@ pipeline {
             parameters {
                 choice(
                 name: 'Invoke_Parameters', 
-                choices:"No\nYes", 
+                choices:"Yes\nNo", 
                 description: "Do you whish to do a dry run to grab parameters?" 
                 )
             }
