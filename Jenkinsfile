@@ -43,7 +43,7 @@ pipeline {
             }
         }
         
-        stage("echo")
+        stage("params")
         {
             steps {
             echo "${params.Nodes}"
