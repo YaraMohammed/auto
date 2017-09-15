@@ -4,30 +4,36 @@ pipeline {
     agent any
     
         agent any
+        /*
         parameters {
             choice(
                 name: 'Nodes',
-                choices:"Linux\nMac",
+                choices:"alphine\nWin",
                 description: "Choose Node!")
             choice(
                 name: 'Versions',
-                choices:"1.0\n2.9",
+                choices:"5.0\n6.0",
                 description: "Build for which version?" )
-    }
+        }
+    */
+            parameters {
+                choice(
+                name: 'Invoke_Parameters', 
+                choices:"Yes\nNo", 
+                description: "Do you whish to do a dry run to grab parameters?" 
+                )
+            }
 
     stages {
-        stage('Build') {
+        stage("parameterizing") {
             steps {
                 script {
-                    build(job: "job1",
-                        parameters:
-                        [string(name: 'Nodes', value: "${params.Nodes}"),
-                        string(name: 'Versions', value: "${params.Versions}")
-                        ])
+                    if ("${params.Invoke_Parameters}" == "Yes") {
+                        currentBuild.result = 'ABORTED'
+                        error('DRY RUN COMPLETED. JOB PARAMETERIZED.')
+                    }
                 }
             }
         }
-        
-    }
 
 }
