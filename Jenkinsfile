@@ -3,6 +3,10 @@
 pipeline {
     agent any
 
+    //this is a work around to skip defining all the parameters in advance for the triggered job
+    //at first run set to Invoke_Parameters to Yes this will first dry run, which sets the parameters, 
+    //and at the second run, you can run the job as a parameterized job even if you didn't create it as one.
+    //at second run set Invoke_Parameters to No
         parameters {
             choice(
                 name: 'Nodes',
@@ -14,11 +18,12 @@ pipeline {
                 description: "Build for which version?" )
             choice(
                 name: 'Invoke_Parameters', 
-                choices:"No\nYes", 
+                choices:"Yes\nNo", 
                 description: "Do you whish to do a dry run to grab parameters?" 
                 )
     }
 
+    //stage to build job1 and pass the parametetrs to it 
     stages {
         stage('Build') {
             steps {
