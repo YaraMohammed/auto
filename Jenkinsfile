@@ -32,7 +32,7 @@ pipeline {
                         parameters:
                         [string(name: 'Nodes', value: "${params.Nodes}"),
                         string(name: 'Versions', value: "${params.Versions}")
-                         string(name: 'Versions', value: "${params.Invoke_Parameters}")
+                        string(name: 'Versions', value: "${params.Invoke_Parameters}")
                         ])
                 }
             }
