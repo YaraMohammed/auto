@@ -11,6 +11,7 @@ pipeline {
                 sh 'ls'
                 */
                 sh 'echo $BUILD_NUMBER'
+                input 'Ready to nbwz el donia :D?';
             }
         }
         /*
