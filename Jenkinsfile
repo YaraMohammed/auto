@@ -16,7 +16,7 @@ pipeline {
         stage("input"){
             steps {
             echo "running"
-            def branchInput = input message: 'Please input branch to test against', parameters: [[$class: 'StringParameterDefinition', defaultValue: 'master', description: '', name: 'branch']]
+            def branchInput = input message: 'Please input branch to test against'
             echo "BRANCH NAME: ${branchInput}"
         }
         
