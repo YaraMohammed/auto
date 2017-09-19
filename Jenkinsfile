@@ -11,8 +11,6 @@ pipeline {
                 sh 'ls'
                 */
                 sh 'echo $BUILD_NUMBER'
-                sh 'read VAR'
-                sh 'echo $VAR'
             }
         }
         /*
