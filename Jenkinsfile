@@ -15,6 +15,7 @@ pipeline {
                 sh 'echo $VAR'
             }
         }
+        /*
         stage("input"){
             steps {
             echo "running"
@@ -23,6 +24,7 @@ pipeline {
         }
         
     }
+    */
     }
         /*
     post {
