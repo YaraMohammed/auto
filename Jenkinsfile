@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                input 'You are awesome, Do you agree?';
+                input 'hello dear lets test?';
             }
         }
     }
