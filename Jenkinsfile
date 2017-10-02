@@ -10,9 +10,10 @@ pipeline {
     }
     post {
         success{
-            mail (to: 'eng.yara4@gmail.com',
-                subject: "Jenkins",
-                body: "Build is done successfully.");
+            echo 'success'
+        }
+        failure{
+            echo 'fail'
         }
     }
 }
