@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                input 'hello dear lets test?';
+                sh'cd ayhaga'
             }
         }
     }
